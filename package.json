@@ -1,0 +1,24 @@
+{
+  "name": "MySQL-Amazon_Like_App",
+  "version": "1.0.0",
+  "description": "",
+  "main": "bamazonCustomer.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mail4inom/MySQL-Amazon_Like_App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mail4inom/MySQL-Amazon_Like_App/issues"
+  },
+  "homepage": "https://github.com/mail4inom/MySQL-Amazon_Like_App#readme",
+  "dependencies": {
+    "inquirer": "^5.2.0",
+    "mysql": "^2.15.0"
+  }
+}
