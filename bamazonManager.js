@@ -52,6 +52,7 @@ function managerPrompt() {
             }
         });
 }
+
 function lowInventory() {
     var query = "SELECT * FROM products";
     connection.query(query, function (err, res) {
@@ -61,11 +62,9 @@ function lowInventory() {
                 console.log("ID: " + res[i].item_id + ") Product: " + res[i].product_name + ",  Price: $" + res[i].price + ",  Stock_quantity: " + res[i].stock_quantity);
             }
         }
-        
         console.log("---------------------------------------------------------------------\n");
         managerPrompt();
     });
-
 }
 
 function addToInventory() {
@@ -152,7 +151,9 @@ function addNewProduct() {
                 },
                 function (err) {
                     if (err) throw err;
-                    console.log("New product was added successfully!");
+                    console.log(" __________________________________________________________________________________________________________________");
+                    console.log("| New Product: " + answer.product_name + " to the " + answer.department_name + " Department was added successfully! |");
+                    console.log("|__________________________________________________________________________________________________________________|");
                     managerPrompt() ;
                 }
             );
@@ -163,7 +164,7 @@ function allProducts() {
     var query = "SELECT * FROM products";
     connection.query(query, function (err, res) {
         for (var i = 0; i < res.length; i++) {
-            console.log("ID: " + res[i].item_id + ") Product: " + res[i].product_name + ",  Price: $" + res[i].price + ",  Stock_quantity: " + res[i].stock_quantity);
+            console.log("ID: " + res[i].item_id + ") Product: " + res[i].product_name + ", Department: " + res[i].department_name + ",  Price: $" + res[i].price + ",  Stock_quantity: " + res[i].stock_quantity);
         }
         console.log("---------------------------------------------------------------------\n");
         managerPrompt() ;
@@ -171,17 +172,6 @@ function allProducts() {
 
 }
 
-function Products() {
-    var query = "SELECT * FROM products";
-    connection.query(query, function (err, res) {
-        for (var i = 0; i < res.length; i++) {
-            console.log("ID: " + res[i].item_id + ") Product: " + res[i].product_name + ",  Price: $" + res[i].price + ",  Stock_quantity: " + res[i].stock_quantity);
-        }
-        console.log("---------------------------------------------------------------------\n");
-      
-    });
-
-}
 
 
 

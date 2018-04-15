@@ -69,11 +69,10 @@ function userPrompt() {
 						connection.end();
 					})
 				} else {
+          allProducts();
 					console.log('Sorry, there is not enough product in stock, your order can not be placed as is.');
 					console.log('Please modify your order.');
 					console.log("\n---------------------------------------------------------------------\n");
-
-					allProducts();
 				}
 			}
 		})
@@ -95,9 +94,7 @@ function allProducts() {
   });
 }
 
-function runBamazon() {
-  allProducts();
-}
 
-runBamazon();
+  allProducts();
+
 
