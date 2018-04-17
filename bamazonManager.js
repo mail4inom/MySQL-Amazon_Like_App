@@ -68,8 +68,8 @@ function lowInventory() {
 }
 
 function addToInventory() {
-    Products();
-    inquirer.prompt([
+    inquirer
+    .prompt([
         {
             type: "input",
             name: "item_id",
